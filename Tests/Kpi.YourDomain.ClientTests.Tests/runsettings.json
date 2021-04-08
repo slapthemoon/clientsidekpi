@@ -1,0 +1,6 @@
+{
+  "SeleniumGrid": {
+    "HostUri": "http://dummy:4444/wd/hub"
+  },
+  "RunType": "Local"
+}
