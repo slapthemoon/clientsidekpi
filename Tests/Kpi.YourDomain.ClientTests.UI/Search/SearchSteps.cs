@@ -14,6 +14,8 @@ namespace Kpi.YourDomain.ClientTests.UI.Search
             _webDriver = webDriver;
         }
 
+        private MainPage MainPage => PageFactory.Get<MainPage>(_webDriver);
+
         private SearchElement SearchElement => PageFactory.Get<MainPage>(_webDriver).HeaderSection.SearchElement;
 
         public void SetValue(string value)
@@ -29,6 +31,12 @@ namespace Kpi.YourDomain.ClientTests.UI.Search
         public void Search(string value)
         {
             SearchElement.Search(value);
+        }
+
+        public void Close()
+        {
+            MainPage.DocSection.CloseButton.GetDisplayed();
+            _webDriver.Close();
         }
     }
 }
