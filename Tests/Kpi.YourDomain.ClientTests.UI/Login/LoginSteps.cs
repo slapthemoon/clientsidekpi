@@ -1,4 +1,5 @@
-﻿using Kpi.YourDomain.ClientTests.Model.Domain.Login;
+﻿using System;
+using Kpi.YourDomain.ClientTests.Model.Domain.Login;
 using Kpi.YourDomain.ClientTests.Model.Platform.Drivers;
 using Kpi.YourDomain.ClientTests.Platform.Configuration.Environment;
 using Kpi.YourDomain.ClientTests.Platform.Factory;
@@ -33,7 +34,7 @@ namespace Kpi.YourDomain.ClientTests.UI.Login
 
         public void Login ()
         {
-            LoginPage.LoginButton.Click();
+            throw new NotImplementedException();
         }
 
         public void OpenLoginPage ()

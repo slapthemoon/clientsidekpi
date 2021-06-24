@@ -2,6 +2,8 @@
 {
     public interface ISearchContext
     {
-        void Search(string value);
+        void Search (string value);
+
+        void SearchAndClose (string value);
     }
 }

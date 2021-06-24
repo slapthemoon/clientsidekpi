@@ -16,5 +16,11 @@ namespace Kpi.YourDomain.ClientTests.Domain.Search
         {
             _searchSteps.Search(value);
         }
+
+        public void SearchAndClose(string value)
+        {
+            _searchSteps.Search(value);
+            _searchSteps.Close();
+        }
     }
 }

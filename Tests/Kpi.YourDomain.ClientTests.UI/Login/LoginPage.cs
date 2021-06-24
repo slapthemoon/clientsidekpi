@@ -1,4 +1,6 @@
-﻿using Kpi.YourDomain.ClientTests.Model.Platform.Drivers;
+﻿using System;
+using System.Linq;
+using Kpi.YourDomain.ClientTests.Model.Platform.Drivers;
 using Kpi.YourDomain.ClientTests.Model.Platform.Locator;
 using Kpi.YourDomain.ClientTests.Platform.Page;
 using Kpi.YourDomain.ClientTests.Platform.WebElements;
@@ -19,7 +21,7 @@ namespace Kpi.YourDomain.ClientTests.UI.Login
         [FindBy(How.XPath, ".//input[@id='auth_pass']")]
         public HtmlTextBox PasswordTextBox { get; set; }
 
-        [FindBy(How.XPath, ".//fieldset//button")]
-        public HtmlButton LoginButton { get; set; }
+        public HtmlButton[] LoginButton =>
+            FindAll<HtmlButton>(new Locator(How.XPath, string.Empty)).ToArray();
     }
 }

@@ -22,5 +22,8 @@ namespace Kpi.YourDomain.ClientTests.UI
 
         [FindBy(How.XPath, ".//rz-product-top")]
         public ProductTopElement ProductTopElement { get; set; }
+
+        [FindBy(How.XPath, ".//rz-product-top")]
+        public DocSection DocSection { get; set; }
     }
 }
